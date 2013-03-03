@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html >
 <html>
 <head>
@@ -11,7 +14,21 @@
 </head>
 
 <body>
+<?php	if(!isset($_SESSION['chatuser']))
+	{
+?>
+	Please enter a username.
+	<form action='setuser.php' method='post'>
+		<input type='text' name='chatuser'/>
+		<input type='submit'/>
+	</form>
+<?php
+	}
+	else 
+	{
+?>
     <canvas id="A" width="1000" height="500"> Your browser doesn't support HTML5. Please upgrade your browser for using the App </canvas>
+<?php } ?>
 </body>
 
 </html>
