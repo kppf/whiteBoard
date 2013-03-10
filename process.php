@@ -3,10 +3,11 @@
 	require_once('db_fns.php');
 	$x = $_POST['x'];
 	$y = $_POST['y'];
-	$user = $_SESSION['user'];
+	$clicking = $_POST['clicking'];
+	$user = $_SESSION['canvasuser'];
 	try {
 		$conn = db_connect();
-		$update = $conn->query("insert into wb values(NULL, '$user', $x, $y)");
+		$update = $conn->query("insert into wb values(NULL, '$user', $x, $y, $clicking)");
 		if(!$update) throw new Exception('Could not insert data in database');
 		echo $conn->insert_id;
 	}
