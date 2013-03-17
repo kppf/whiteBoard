@@ -26,6 +26,7 @@
 
 <body>
     <canvas id="A" width="1000" height="500"> Your browser doesn't support HTML5. Please upgrade your browser for using the App </canvas></body>
+	<div id='customize'><div class='color' style='float:left;'> </div> <div class='width' style='margin-left:5px; float:left;'> </div> <a href='#' class='download' target='_blank' style='text-decoration:none; padding: 10px; background: #ddd; float:left; vertical-align: middle;'>Download</a> </div>
 
 </html>
 <?php } ?>
