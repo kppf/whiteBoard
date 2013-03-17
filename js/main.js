@@ -18,11 +18,9 @@ var clicking=false, chk=-1, lastX, lastY, lx = new Array(3), ly = new Array(3), 
 				console.log(mime);
 				window.open(document.getElementById("A").toDataURL(mime));
 			});
-		/*	$("#customize .download").click(function() {    
-var img = document.getElementById("A").toDataURL("image/png");
-var uriContent = "data:application/octet-stream," + encodeURIComponent(img);
-window.open(uriContent, 'download smiley image');
-});*/
+			$('#customize .clearcanvas').click(function(){
+				context.clearRect(0,0,1000,500);
+			});
 			$('#customize .color a').click(function(){
 				context.strokeStyle=$(this).attr('clr');
 			});
