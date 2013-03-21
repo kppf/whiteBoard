@@ -16,6 +16,7 @@
 		for($i=0; $i<$update->num_rows; $i++)
 		{
 			$row = mysqli_fetch_array($update);
+			if($row['x']==-1 && $row['user']==$user) continue;
 			$x[]=$row['x'];
 			$y[]=$row['y'];
 			$clicking[]=$row['clicking'];
